@@ -11,12 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'app_heroi_flutter',
+      title: 'App Herói Flutter',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HeroList(title: 'app_heroi_flutter'),
+      home: const HeroList(title: 'App Herói Flutter'),
     );
   }
 }
