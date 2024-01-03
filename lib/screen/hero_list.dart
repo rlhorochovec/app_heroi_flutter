@@ -1,4 +1,5 @@
 import 'package:app_heroi_flutter/constant/constants.dart';
+import 'package:app_heroi_flutter/screen/hero_detail.dart';
 import 'package:app_heroi_flutter/service/hero_service.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,9 @@ class _HeroListState extends State<HeroList> {
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           var heroes = snapshot.data;
-          return ListView.builder(
+          return ListView.separated(
+            separatorBuilder: (BuildContext context, int index) =>
+                const Divider(),
             itemCount: heroes == null ? 0 : heroes.length,
             itemBuilder: (context, index) {
               var hero = heroes[index];
@@ -37,7 +40,15 @@ class _HeroListState extends State<HeroList> {
                 ),
                 title: Text(hero.name),
                 subtitle: Text(hero.civil),
-                trailing: const Icon(Icons.more_vert),
+                trailing: const Icon(Icons.keyboard_arrow_right_sharp),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HeroDetail(hero: heroes[index]),
+                    ),
+                  );
+                },
               );
             },
           );
