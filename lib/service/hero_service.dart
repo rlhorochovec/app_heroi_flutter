@@ -3,7 +3,7 @@ import 'package:app_heroi_flutter/model/hero_model.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  static const baseUrl = "localhost:8080";
+  static const baseUrl = "192.168.100.62:8080";
 
   static Future<dynamic> getHeroes() async {
     var url = Uri.http(baseUrl, '/api/heroes');
