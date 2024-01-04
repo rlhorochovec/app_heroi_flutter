@@ -13,7 +13,7 @@ class HeroDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(hero.name.toString()),
+        title: Text(hero.name.toString().toUpperCase()),
       ),
       body: Column(
         children: [
@@ -26,15 +26,9 @@ class HeroDetail extends StatelessWidget {
                   children: [
                     ImageProfile(imageUrl: IMG_URL + hero.image.toString()),
                     const SizedBox(
-                      height: 32,
+                      //height: 12,
                       width: double.infinity,
                     ),
-                    Text(
-                      hero.name.toString(),
-                      style: theme.textTheme.titleLarge!.copyWith(
-                        color: Colors.white,
-                      ),
-                    )
                   ],
                 ),
               )),
@@ -45,12 +39,18 @@ class HeroDetail extends StatelessWidget {
                   ListTile(
                     leading: const Icon(Icons.person),
                     title: const Text('Nome civil'),
-                    subtitle: Text(hero.civil.toString()),
+                    subtitle: Text(hero.civil.toString(),
+                        style: theme.textTheme.titleMedium!.copyWith(
+                          color: Colors.black,
+                        )),
                   ),
                   ListTile(
                     leading: const Icon(Icons.label),
                     title: const Text('Universo'),
-                    subtitle: Text(hero.universe.toString()),
+                    subtitle: Text(hero.universe.toString(),
+                        style: theme.textTheme.titleMedium!.copyWith(
+                          color: Colors.black,
+                        )),
                   )
                 ],
               )),
@@ -71,7 +71,7 @@ class ImageProfile extends StatelessWidget {
         color: Colors.white,
         shape: BoxShape.circle,
       ),
-      padding: const EdgeInsets.all(4),
+      padding: const EdgeInsets.all(2),
       child: CircleAvatar(
         radius: 100.0,
         backgroundImage: NetworkImage(imageUrl),

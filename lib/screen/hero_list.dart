@@ -24,13 +24,12 @@ class _HeroListState extends State<HeroList> {
   }
 
   Widget _buildBody() {
+    final theme = Theme.of(context);
     return FutureBuilder(
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           var heroes = snapshot.data;
-          return ListView.separated(
-            separatorBuilder: (BuildContext context, int index) =>
-                const Divider(),
+          return ListView.builder(
             itemCount: heroes == null ? 0 : heroes.length,
             itemBuilder: (context, index) {
               var hero = heroes[index];
@@ -38,9 +37,15 @@ class _HeroListState extends State<HeroList> {
                 leading: CircleAvatar(
                   backgroundImage: NetworkImage(IMG_URL + hero.image),
                 ),
-                title: Text(hero.name),
+                title: Text(
+                  hero.name,
+                  style: theme.textTheme.titleMedium!.copyWith(
+                    color: Colors.black,
+                  ),
+                ),
                 subtitle: Text(hero.civil),
                 trailing: const Icon(Icons.keyboard_arrow_right_sharp),
+                isThreeLine: true,
                 onTap: () {
                   Navigator.push(
                     context,
