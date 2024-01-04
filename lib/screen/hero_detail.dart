@@ -26,7 +26,6 @@ class HeroDetail extends StatelessWidget {
                   children: [
                     ImageProfile(imageUrl: IMG_URL + hero.image.toString()),
                     const SizedBox(
-                      //height: 12,
                       width: double.infinity,
                     ),
                   ],
