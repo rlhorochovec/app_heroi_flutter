@@ -13,7 +13,7 @@ class HeroDetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(hero.name.toString().toUpperCase()),
+        title: Text(hero.name.toString()),
       ),
       body: Column(
         children: [
