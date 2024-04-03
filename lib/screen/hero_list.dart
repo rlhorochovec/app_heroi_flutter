@@ -29,7 +29,9 @@ class _HeroListState extends State<HeroList> {
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           var heroes = snapshot.data;
-          return ListView.builder(
+          return ListView.separated(
+            separatorBuilder: (BuildContext context, int index) =>
+                const Divider(),
             itemCount: heroes == null ? 0 : heroes.length,
             itemBuilder: (context, index) {
               var hero = heroes[index];
@@ -45,7 +47,6 @@ class _HeroListState extends State<HeroList> {
                 ),
                 subtitle: Text(hero.civil),
                 trailing: const Icon(Icons.keyboard_arrow_right_sharp),
-                isThreeLine: true,
                 onTap: () {
                   Navigator.push(
                     context,

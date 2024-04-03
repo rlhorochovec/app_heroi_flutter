@@ -32,7 +32,7 @@ class HeroDetail extends StatelessWidget {
                 ),
               )),
           Expanded(
-              flex: 1,
+              flex: 2,
               child: Column(
                 children: [
                   ListTile(
@@ -72,7 +72,7 @@ class ImageProfile extends StatelessWidget {
       ),
       padding: const EdgeInsets.all(2),
       child: CircleAvatar(
-        radius: 100.0,
+        radius: 80.0,
         backgroundImage: NetworkImage(imageUrl),
         backgroundColor: Colors.white,
       ),
