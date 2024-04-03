@@ -17,3 +17,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Screenshots
 <img src="https://github.com/rlhorochovec/app_heroi_flutter/blob/develop/screenshots/hero_list.png" width="250" /> <img src="https://github.com/rlhorochovec/app_heroi_flutter/blob/develop/screenshots/hero_detail.png" width="250" />
+
+## Demonstração
+
+<img src="https://github.com/rlhorochovec/app_heroi_flutter/blob/develop/screenshots/demo.gif" width="250" />
