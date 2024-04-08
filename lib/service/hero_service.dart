@@ -8,8 +8,9 @@ class ApiService {
   static Future<dynamic> getHeroes() async {
     var url = Uri.http(baseUrl, '/api/heroes');
     var response = await http.get(url);
+    final decodedResponse = utf8.decode(response.bodyBytes);
 
-    var heroes = (json.decode(response.body))
+    var heroes = (json.decode(decodedResponse))
         .map((item) => HeroModel.fromJson(item))
         .toList();
 
