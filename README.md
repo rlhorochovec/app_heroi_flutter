@@ -16,7 +16,7 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 ## Screenshots
-<img src="https://github.com/rlhorochovec/app_heroi_flutter/blob/develop/screenshots/hero_list.png" width="250" /> <img src="https://github.com/rlhorochovec/app_heroi_flutter/blob/develop/screenshots/hero_detail.png" width="250" />
+<img src="https://github.com/rlhorochovec/app_heroi_flutter/blob/develop/screenshots/hero_list.png" width="250" /> <img src="https://github.com/rlhorochovec/app_heroi_flutter/blob/develop/screenshots/hero_detail_01.png" width="250" /> <img src="https://github.com/rlhorochovec/app_heroi_flutter/blob/develop/screenshots/hero_detail_02.png" width="250" />
 
 ## Demonstração
 

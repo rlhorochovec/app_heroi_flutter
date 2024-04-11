@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Heróis',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.tealAccent),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
       home: const HeroList(title: 'Heróis'),
